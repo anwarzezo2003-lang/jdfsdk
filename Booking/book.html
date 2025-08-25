@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="احجز رحلتك السياحية في جنوب الأردن مع دروب الجنوب - وادي رم، الكرك، العقبة">
+    <meta name="keywords" content="حجز سياحي، جنوب الأردن، وادي رم، الكرك، العقبة، رحلات سياحية">
+    <meta name="author" content="درووب الجنوب">
+    <meta property="og:title" content="احجز رحلتك - دروب الجنوب">
+    <meta property="og:description" content="احجز رحلتك السياحية في جنوب الأردن">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://droub-aljanoub.netlify.app/booking">
+    <meta property="og:image" content="../images/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="احجز رحلتك - دروب الجنوب">
+    <meta name="twitter:description" content="احجز رحلتك السياحية في جنوب الأردن">
+    <meta name="theme-color" content="#d97706">
+    <title>احجز رحلتك - دروب الجنوب</title>
+
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="book.css" as="style">
+    <link rel="preload" href="book.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <link rel="stylesheet" href="book.css">
+    
+    
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-X');
+    </script>
+</head>
+<body>
+  <!-- Fixed Header (injected) -->
+  <header class="header"></header>
+
+  <!-- Booking Form Section -->
+  <section class="section booking-section">
+    <div class="container">
+      <h2 class="section-title">احجز رحلتك السياحية</h2>
+      <div class="booking-form">
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="name" class="form-label">الاسم الكامل *</label>
+            <input type="text" id="name" name="name" class="form-input" required 
+                   placeholder="أدخل اسمك الكامل" autocomplete="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">البريد الإلكتروني *</label>
+            <input type="email" id="email" name="email" class="form-input" required 
+                   placeholder="أدخل بريدك الإلكتروني" autocomplete="email">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" class="form-label">رقم الهاتف *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required 
+                   placeholder="+962 79 123 4567" autocomplete="tel">
+          </div>
+          
+          <div class="form-group">
+            <label for="experience" class="form-label">نوع التجربة *</label>
+            <select id="experience" name="experience" class="form-input" required>
+              <option value="">اختر نوع التجربة</option>
+              <option value="nature">الطبيعة - وادي رم ومحمية ضانا</option>
+              <option value="culture">الثقافة - الكرك والشوبك</option>
+              <option value="adventure">المغامرة - التسلق والمشي</option>
+              <option value="custom">تجربة مخصصة</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="date" class="form-label">تاريخ بداية الرحلة *</label>
+            <input type="date" id="date" name="date" class="form-input" required 
+                   min="2024-01-01">
+          </div>
+
+          <div class="form-group">
+            <label for="end_date" class="form-label">تاريخ نهاية الرحلة *</label>
+            <input type="date" id="end_date" name="end_date" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="participants" class="form-label">عدد المشاركين *</label>
+            <input type="number" id="participants" name="participants" class="form-input" required 
+                   min="1" max="20" placeholder="عدد الأشخاص">
+          </div>
+          
+          <div class="form-group">
+            <label for="budget" class="form-label">الميزانية (اختياري)</label>
+            <select id="budget" name="budget" class="form-input">
+              <option value="">اختر الميزانية</option>
+              <option value="low">اقتصادية (50-150 دينار)</option>
+              <option value="medium">متوسطة (150-300 دينار)</option>
+              <option value="high">فاخرة (300+ دينار)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="special_requirements" class="form-label">متطلبات خاصة</label>
+            <textarea id="special_requirements" name="special_requirements" class="form-input form-textarea" 
+                      placeholder="أخبرنا عن أي متطلبات خاصة أو احتياجات محددة..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">الخدمات الإضافية</label>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" name="services[]" value="transportation" style="width: auto;">
+                <span>النقل</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" name="services[]" value="accommodation" style="width: auto;">
+                <span>الإقامة</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" name="services[]" value="meals" style="width: auto;">
+                <span>الوجبات</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" name="services[]" value="guide" style="width: auto;">
+                <span>مرشد خاص</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="preferred_guide" class="form-label">المرشد المفضل (اختياري)</label>
+            <select id="preferred_guide" name="preferred_guide" class="form-input">
+              <option value="">اختر مرشد (أو اتركه فارغاً)</option>
+              <option value="ahmed">أحمد محمد - وادي رم والكرك</option>
+              <option value="fatima">فاطمة علي - البتراء والشوبك</option>
+              <option value="omar">عمر خالد - المغامرات والتسلق</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="form-submit" id="submit-btn">
+            <span class="submit-text">إرسال طلب الحجز</span>
+            <span class="loading-text" style="display: none;">جاري الإرسال...</span>
+          </button>
+        </form>
+        
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>جاري إرسال طلب الحجز...</p>
+        </div>
+        
+        <div class="success-message" id="success-message">
+          <h3>تم إرسال طلب الحجز بنجاح! 🎉</h3>
+          <p>سنقوم بالتواصل معك في أقرب وقت ممكن لتأكيد التفاصيل.</p>
+          <p>رقم الطلب: <strong id="booking-id"></strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer (injected) -->
+  <footer class="enhanced-footer"></footer>
+
+  <!-- Scripts -->
+  <script defer src="../js/header-footer.js"></script>
+  <script defer src="book.js"></script>
+</body>
+</html>

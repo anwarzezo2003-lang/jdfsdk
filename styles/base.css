@@ -1,0 +1,26 @@
+/* Base styles: fonts, variables, reset, and common layout */
+
+/* Fonts */
+@font-face{font-family:'Noto Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:local('Noto Sans Arabic Regular'),local('NotoSansArabic-Regular'),url('../Noto_Sans_Arabic/NotoSansArabic-Regular.ttf') format('truetype');unicode-range:U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF}
+@font-face{font-family:'Noto Sans Arabic';font-style:normal;font-weight:500;font-display:swap;src:local('Noto Sans Arabic Medium'),local('NotoSansArabic-Medium'),url('../Noto_Sans_Arabic/NotoSansArabic-Medium.ttf') format('truetype');unicode-range:U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF}
+@font-face{font-family:'Noto Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:local('Noto Sans Arabic Bold'),local('NotoSansArabic-Bold'),url('../Noto_Sans_Arabic/NotoSansArabic-Bold.ttf') format('truetype');unicode-range:U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:local('Roboto Regular'),local('Roboto-Regular'),url('../Roboto/static/Roboto-Regular.ttf') format('truetype');unicode-range:U+0000-00FF, U+0100-024F}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:local('Roboto Medium'),local('Roboto-Medium'),url('../Roboto/static/Roboto-Medium.ttf') format('truetype');unicode-range:U+0000-00FF, U+0100-024F}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:local('Roboto Bold'),local('Roboto-Bold'),url('../Roboto/static/Roboto-Bold.ttf') format('truetype');unicode-range:U+0000-00FF, U+0100-024F}
+
+/* Variables */
+:root{--primary-color:#C18F59;--secondary-color:#A86E3B;--accent-color:#7C5A2E;--text-primary:#3F2E1E;--text-secondary:#6B5B42;--background-primary:#ffffff;--background-secondary:#ffffff;--white:#ffffff;--shadow-light:rgba(0,0,0,0.1);--shadow-medium:rgba(0,0,0,0.15);--gradient-primary:linear-gradient(135deg,var(--primary-color),var(--secondary-color));--gradient-secondary:linear-gradient(135deg,var(--accent-color),var(--primary-color));--border-radius:0.5rem;--border-radius-lg:1rem;--border-radius-xl:1.5rem;--transition:all 0.3s ease;--transition-slow:all 0.5s ease;--error-color:#dc2626;--success-color:#059669;--warning-color:#C18F59;--surface-translucent:rgba(243,233,210,0.95);--surface-translucent-strong:rgba(243,233,210,0.98);--card-bg:var(--background-secondary)}
+
+/* Reset */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{height:100%}
+body{font-family:'Noto Sans Arabic','Roboto',sans-serif;scroll-behavior:smooth;background-color:var(--background-primary);color:var(--text-primary);overflow-x:hidden;line-height:1.6}
+
+/* Common layout */
+.container{max-width:1280px;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}
+.section{padding:5rem 0;background:linear-gradient(135deg,var(--background-secondary),var(--background-primary));position:relative}
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(30,58,138,0.05))}
+.section-title{text-align:center;font-size:2.5rem;font-weight:700;color:#1e293b;margin-bottom:3rem;position:relative}
+.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:var(--gradient-primary);border-radius:2px}
+
+

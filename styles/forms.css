@@ -1,0 +1,22 @@
+/* Shared form styles */
+
+.booking-form{background:var(--card-bg, var(--background-secondary));padding:2rem;border-radius:20px;box-shadow:0 10px 30px var(--shadow-light);max-width:600px;margin:0 auto}
+.form-group{margin-bottom:1.5rem}
+.form-label{display:block;margin-bottom:0.5rem;font-weight:600;color:var(--text-primary)}
+.form-input{width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:var(--border-radius);font-size:1rem;transition:all 0.3s ease;font-family:inherit}
+.form-input:focus{border-color:var(--primary-color);outline:none;box-shadow:0 0 0 3px rgba(215,119,6,0.1)}
+.form-input.error{border-color:var(--error-color)}
+.form-input.success{border-color:var(--success-color)}
+.form-textarea{min-height:120px;resize:vertical}
+.form-submit{background:var(--gradient-primary);color:var(--white);padding:1rem 2rem;border:none;border-radius:25px;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;width:100%;font-family:inherit}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(215,119,6,0.3)}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed}
+.loading{display:none;text-align:center;padding:2rem}
+.loading.active{display:block}
+.spinner{border:3px solid #f3f3f3;border-top:3px solid var(--primary-color);border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite;margin:0 auto 1rem}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.success-message{display:none;text-align:center;padding:2rem;color:var(--success-color);font-weight:600}
+.success-message.active{display:block}
+.field-error{color:var(--error-color);font-size:0.875rem;margin-top:0.25rem}
+
+

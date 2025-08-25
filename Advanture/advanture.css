@@ -1,0 +1,41 @@
+/* Adventure (Unified) CSS bundle */
+@import url("../styles/base.css");
+/* header-footer.css is linked in HTML; avoid double import here */
+
+/* Page specific */
+.I17{padding:5rem 0;background:linear-gradient(135deg,var(--background-secondary),var(--background-primary));position:relative}
+.I17::before{content:'';position:absolute;top:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(30,58,138,0.05))}
+.I18{text-align:center;font-size:2.5rem;font-weight:700;color:#1e293b;margin-bottom:3rem;position:relative}
+.I18::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(135deg,#d97706,#C85C5C);border-radius:2px}
+.I19{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;padding:0 1rem;align-items:center}
+.I20{background:var(--card-bg,var(--background-secondary));padding:2rem;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:all 0.3s ease}
+.I20:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.15)}
+.I21{font-size:1.8rem;font-weight:700;color:#1e293b;margin-bottom:1rem;transition:color 0.3s ease}
+.I20:hover .I21{color:#d97706}
+.I22{color:#64748b;line-height:1.6;margin-bottom:1.5rem;transition:color 0.3s ease}
+.I20:hover .I22{color:#475569}
+.I23{list-style:none;padding:0;margin:0}
+.I23 li{padding:0.5rem 0;color:#64748b;position:relative;padding-left:1.5rem;transition:color 0.3s ease}
+.I23 li::before{content:'✓';position:absolute;left:0;color:#d97706;font-weight:bold}
+.I20:hover .I23 li{color:#475569}
+.I24{text-align:center}
+.I24 img{width:100%;max-width:500px;height:auto;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:all 0.3s ease;background-color:#ffffff}
+.I24 img:hover{transform:scale(1.05);box-shadow:0 15px 40px rgba(0,0,0,0.3)}
+.image-frame{width:100%;max-width:900px;margin:0 auto;background:var(--card-bg,var(--background-secondary));padding:12px;border-radius:16px;border:6px solid #f1f5f9;box-shadow:0 10px 30px rgba(0,0,0,0.15);position:relative}
+.image-frame::before{content:'';position:absolute;inset:-12px;border-radius:20px;background:linear-gradient(135deg,rgba(217,119,6,0.12),rgba(200,92,92,0.12));filter:blur(10px);z-index:-1}
+.image-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;border-radius:12px;overflow:hidden}
+.image-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform 0.2s ease}
+.image-grid img:hover{transform:scale(1.05)}
+@media (max-width:768px){.image-frame{max-width:640px}.image-grid{gap:10px}}
+.image-split-frame{width:100%;max-width:520px;margin:0 auto;background:var(--card-bg,var(--background-secondary));padding:10px;border-radius:16px;border:6px solid #f3f4f6;box-shadow:0 10px 30px rgba(0,0,0,0.15)}
+.split-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;border-radius:12px;overflow:hidden}
+.split-tile{background-image:var(--img-url);background-size:200% 200%;background-repeat:no-repeat;width:100%;height:140px;transition:transform 0.3s ease,filter 0.3s ease}
+.split-tile:nth-child(1){background-position:0% 0%}
+.split-tile:nth-child(2){background-position:100% 0%}
+.split-tile:nth-child(3){background-position:0% 100%}
+.split-tile:nth-child(4){background-position:100% 100%}
+.split-tile:hover{transform:scale(1.04);filter:saturate(1.1)}
+@media (max-width:768px){.I19{grid-template-columns:1fr;gap:2rem}.I18{font-size:2rem}.I21{font-size:1.5rem}}
+@media (max-width:480px){.I17{padding:3rem 0}.I18{font-size:1.8rem}.I20{padding:1.5rem}.I21{font-size:1.3rem}}
+
+ 

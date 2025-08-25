@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف تجارب سياحية أصيلة في جنوب الأردن مع دروب الجنوب - وادي رم، الكرك، العقبة، البتراء">
+    <meta name="keywords" content="سياحة الأردن، جنوب الأردن، وادي رم، الكرك، العقبة، البتراء، مرشدين محليين">
+    <meta name="author" content="درووب الجنوب">
+    <meta property="og:title" content="درووب الجنوب - تجارب سياحية أصيلة في جنوب الأردن">
+    <meta property="og:description" content="اكتشف كنوز جنوب الأردن مع مرشدين محليين خبراء">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://droub-aljanoub.netlify.app">
+    <meta property="og:image" content="../images/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="درووب الجنوب - تجارب سياحية أصيلة">
+    <meta name="twitter:description" content="اكتشف كنوز جنوب الأردن مع مرشدين محليين">
+    <meta name="msapplication-TileColor" content="#d97706">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="درووب الجنوب">
+    <title>درووب الجنوب - تجارب سياحية أصيلة في جنوب الأردن</title>
+
+      <!-- Resource Hints -->
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+      <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+      <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+      <link rel="preconnect" href="https://a.tile.openstreetmap.org" crossorigin>
+      <link rel="preconnect" href="https://b.tile.openstreetmap.org" crossorigin>
+      <link rel="preconnect" href="https://c.tile.openstreetmap.org" crossorigin>
+
+      <!-- Preload critical resources -->
+      <link rel="preload" href="home.css" as="style">
+      <link rel="preload" href="home.js" as="script">
+      <link rel="preload" href="../images/image.jpg?v=20250809-2" as="image">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <link rel="stylesheet" href="home.css">
+    
+    
+    
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-X');
+    </script>
+</head>
+<body>
+  <!-- Fixed Header (injected) -->
+  <header class="header"></header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">درووب الجنوب</h1>
+      <p class="hero-subtitle">اكتشف كنوز جنوب الأردن مع مرشدين محليين خبراء</p>
+      <a href="../Auth/login.html?redirect=..%2FBooking%2Fbook.html" class="hero-cta">احجز رحلتك الآن</a>
+    </div>
+  </section>
+
+  <!-- Experiences Section -->
+  <section id="experiences" class="section">
+    <h2 class="section-title">تجاربنا السياحية</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="../images/image-nature/image2.1.jpg" alt="وادي رم - الصحراء الحمراء" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3 class="card-title">الطبيعة</h3>
+          <p class="card-description">اكتشف جمال وادي رم الصحراوي ومحمية ضانا الطبيعية مع مرشدين محليين خبراء</p>
+          <a href="../Nature/nature.html" class="card-link">استكشف الطبيعة</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../images/image-culture/image3.1.jpg" alt="البتراء - الخزنة" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3 class="card-title">الثقافة</h3>
+          <p class="card-description">تعرف على تاريخ البتراء والكرك والشوبك مع مرشدين محليين يعرفون كل التفاصيل</p>
+          <a href="../Culture/culture.html" class="card-link">اكتشف الثقافة</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../images/image-adventure/image4.1.jpg" alt="مغامرات التسلق" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3 class="card-title">المغامرة</h3>
+          <p class="card-description">عش مغامرات مثيرة في التسلق والمشي في الجبال مع مرشدين محترفين</p>
+          <a href="../Advanture/advanture.html" class="card-link">ابدأ المغامرة</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map" class="map-section">
+    <h2 class="section-title">خريطة تفاعلية</h2>
+    <div class="map-container"></div>
+  </section>
+
+  <!-- Enhanced Guides Section -->
+  <section id="guides" class="section">
+    <h2 class="section-title">تعرف على مرشدينا المحليين</h2>
+    <div class="card-grid">
+      <div class="guide-card">
+        <div class="guide-image">
+          <img src="../images/image5.jpg" alt="أحمد - مرشد محلي" loading="lazy">
+        </div>
+        <div class="guide-info">
+          <div class="guide-title">مرشد محلي</div>
+          <h3 class="guide-name">أحمد محمد</h3>
+          <p class="guide-description">مرشد محلي خبير في جنوب الأردن مع أكثر من 10 سنوات من الخبرة في السياحة المحلية.</p>
+          <div class="guide-specialties">
+            <span class="specialty-tag">وادي رم</span>
+            <span class="specialty-tag">الكرك</span>
+            <span class="specialty-tag">العقبة</span>
+          </div>
+          <div class="guide-rating">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="rating-text">4.9 (127 تقييم)</span>
+          </div>
+        </div>
+      </div>
+      <div class="guide-card">
+        <div class="guide-image">
+          <img src="../images/image6.jpg" alt="فاطمة - مرشدة محلية" loading="lazy">
+        </div>
+        <div class="guide-info">
+          <div class="guide-title">مرشدة محلية</div>
+          <h3 class="guide-name">فاطمة علي</h3>
+          <p class="guide-description">مرشدة محلية متخصصة في السياحة الثقافية والتراثية في جنوب الأردن.</p>
+          <div class="guide-specialties">
+            <span class="specialty-tag">البتراء</span>
+            <span class="specialty-tag">الشوبك</span>
+            <span class="specialty-tag">التراث</span>
+          </div>
+          <div class="guide-rating">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="rating-text">4.8 (95 تقييم)</span>
+          </div>
+        </div>
+      </div>
+      <div class="guide-card">
+        <div class="guide-image">
+          <img src="../images/image7.jpg" alt="عمر - مرشد مغامرات" loading="lazy">
+        </div>
+        <div class="guide-info">
+          <div class="guide-title">مرشد مغامرات</div>
+          <h3 class="guide-name">عمر خالد</h3>
+          <p class="guide-description">مرشد متخصص في المغامرات والأنشطة الخارجية في جبال الجنوب.</p>
+          <div class="guide-specialties">
+            <span class="specialty-tag">تسلق الصخور</span>
+            <span class="specialty-tag">المشي</span>
+            <span class="specialty-tag">المغامرات</span>
+          </div>
+          <div class="guide-rating">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="rating-text">4.9 (156 تقييم)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="section">
+    <h2 class="section-title">إحصائيات السياحة</h2>
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <h3 class="dashboard-title">الزوار السنويون</h3>
+        <div class="dashboard-content">
+          <p>أكثر من 50,000 زائر سنوياً يستكشفون جنوب الأردن مع مرشدينا المحليين</p>
+        </div>
+      </div>
+      <div class="dashboard-card">
+        <h3 class="dashboard-title">التقييمات</h3>
+        <div class="dashboard-content">
+          <p>4.8/5 تقييم متوسط من أكثر من 10,000 تقييم من زوارنا السعداء</p>
+        </div>
+      </div>
+      <div class="dashboard-card">
+        <h3 class="dashboard-title">المرشدون المحليون</h3>
+        <div class="dashboard-content">
+          <p>25 مرشد محلي معتمد وخبير في جميع مناطق جنوب الأردن</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer (injected) -->
+  <footer class="enhanced-footer"></footer>
+
+  <!-- Scripts -->
+  <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script defer src="../js/header-footer.js"></script>
+  <script defer src="home.js"></script>
+</body>
+</html>

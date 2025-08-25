@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إنشاء حساب في درووب الجنوب">
+  <title>إنشاء حساب - درووب الجنوب</title>
+  <link rel="stylesheet" href="../styles/header-footer.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <header class="header"></header>
+
+  <section class="section auth-section">
+    <div class="auth-container">
+      <div class="auth-pane">
+        <div class="auth-pane-inner">
+          <h3 class="pane-title">درووب الجنوب</h3>
+          <p class="pane-subtitle">ابدأ رحلتك معنا اليوم مع تجارب أصيلة في جنوب الأردن</p>
+          <ul class="auth-benefits">
+            <li>مرشدون محليون معتمدون</li>
+            <li>تجارب متنوعة تناسب اهتماماتك</li>
+            <li>متابعة فورية لطلبات الحجز</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-content">
+        <h2 class="auth-title">إنشاء حساب</h2>
+        <form id="signup-form" class="auth-form">
+        <div class="form-group with-icon icon-user">
+          <label for="name" class="form-label">الاسم الكامل</label>
+          <input id="name" type="text" class="form-input" required placeholder="أدخل اسمك" autocomplete="name">
+        </div>
+        <div class="form-group with-icon icon-mail">
+          <label for="email" class="form-label">البريد الإلكتروني</label>
+          <input id="email" type="email" class="form-input" required placeholder="example@mail.com" autocomplete="email">
+        </div>
+        <div class="form-group with-icon icon-lock">
+          <label for="password" class="form-label">كلمة المرور</label>
+          <input id="password" type="password" class="form-input" required minlength="6" placeholder="••••••••" autocomplete="new-password">
+          <button type="button" class="password-toggle" aria-label="إظهار/إخفاء كلمة المرور"></button>
+        </div>
+        <button type="submit" class="form-submit" id="signup-submit">إنشاء حساب</button>
+        <div class="divider"><span>أو</span></div>
+        <div class="social-buttons">
+          <button type="button" class="btn-social google" aria-label="Google">G</button>
+          <a class="btn-social facebook" aria-label="Facebook" href="#"><img src="../images/facebook.svg" alt="Facebook"></a>
+        </div>
+        <div class="auth-alt">
+          <span>لديك حساب؟</span>
+          <a id="to-login" href="login.html">تسجيل الدخول</a>
+        </div>
+        <div class="auth-error" id="auth-error" role="alert" aria-live="polite" style="display:none"></div>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="enhanced-footer"></footer>
+
+  <script defer src="../js/header-footer.js"></script>
+  <script defer src="auth.js"></script>
+</body>
+</html>
+

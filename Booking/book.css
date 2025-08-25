@@ -1,0 +1,14 @@
+/* Booking (Unified) CSS bundle */
+@import url("../styles/base.css");
+@import url("../styles/forms.css");
+
+/* Page container width */
+.container{max-width:1300px;margin:0 auto;padding:0 1rem}
+
+/* Center booking page title */
+.section-title{ text-align:center }
+
+/* Booking page spacing: separate from header and footer without forcing scroll */
+.booking-section{padding-top:1.25rem;padding-bottom:2rem}
+.booking-section .section-title{margin-bottom:1rem}
+.booking-form{margin-top:0}

@@ -1,0 +1,32 @@
+/* Contact (Unified) */
+@import url("../styles/base.css");
+@import url("../styles/forms.css");
+/* header-footer.css is linked in HTML; keep footer/header unified */
+
+/* Vars + base are provided by base.css */
+
+.container{max-width:1280px;margin:0 auto;padding:0 1rem}
+.section{padding:5rem 0;background:linear-gradient(135deg,var(--background-secondary),var(--background-primary));position:relative}
+.section::before{content:'';position:absolute;top:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,rgba(30,58,138,0.05))}
+.section-title{text-align:center;font-size:2.5rem;font-weight:700;color:#1e293b;margin-bottom:3rem;position:relative}
+.section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:var(--gradient-primary);border-radius:2px}
+
+/* Contact content */
+.contact-form{background:var(--card-bg);padding:2rem;border-radius:20px;box-shadow:0 10px 30px var(--shadow-light);max-width:720px;margin:0 auto;transition:all .3s ease}
+.contact-form:hover{transform:translateY(-6px);box-shadow:0 20px 40px var(--shadow-medium)}
+
+@media (max-width:768px){
+  .section-title{font-size:2rem}
+}
+
+.hero{position:relative;margin-top:80px;min-height:40vh;display:flex;align-items:center;justify-content:center;color:white;text-align:center;overflow:hidden;background-position:center;background-color:#ffffff}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at center,rgba(255,255,255,0.08) 0%,transparent 70%)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(63,46,30,0.52), rgba(63,46,30,0.30))}
+.hero-content{position:relative;z-index:2;max-width:900px;padding:2rem}
+.hero-title{font-size:2.6rem;line-height:1.2;font-weight:800;margin-bottom:0.75rem;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.hero-subtitle{font-size:1.1rem;line-height:1.85;color:#fff;max-width:46rem;margin:0 auto 1.2rem auto;text-shadow:0 2px 6px rgba(0,0,0,.6);font-weight:700}
+
+/* Header buttons styles come from styles/header-footer.css (linked in HTML) */
+
+/* Use global footer layout; no overrides here */
+

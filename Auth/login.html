@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تسجيل الدخول إلى درووب الجنوب">
+  <title>تسجيل الدخول - درووب الجنوب</title>
+  <link rel="stylesheet" href="../styles/header-footer.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <header class="header"></header>
+
+  <section class="section auth-section">
+    <div class="auth-container">
+      <div class="auth-pane">
+        <div class="auth-pane-inner">
+          <h3 class="pane-title">درووب الجنوب</h3>
+          <p class="pane-subtitle">اكتشف كنوز جنوب الأردن مع مرشدين محليين خبراء</p>
+          <ul class="auth-benefits">
+            <li>مرشدون محليون معتمدون</li>
+            <li>تجارب طبيعة وثقافة ومغامرة</li>
+            <li>حجز سهل وسريع</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-content">
+        <h2 class="auth-title">تسجيل الدخول</h2>
+        <form id="login-form" class="auth-form">
+        <div class="form-group with-icon icon-mail">
+          <label for="email" class="form-label">البريد الإلكتروني</label>
+          <input id="email" type="email" class="form-input" required placeholder="example@mail.com" autocomplete="email">
+        </div>
+        <div class="form-group with-icon icon-lock">
+          <label for="password" class="form-label">كلمة المرور</label>
+          <input id="password" type="password" class="form-input" required placeholder="••••••••" autocomplete="current-password">
+          <button type="button" class="password-toggle" aria-label="إظهار/إخفاء كلمة المرور"></button>
+        </div>
+        <div class="auth-row">
+          <label class="remember">
+            <input type="checkbox"> تذكرني
+          </label>
+          <a class="forgot" href="#">هل نسيت كلمة المرور؟</a>
+        </div>
+        <button type="submit" class="form-submit" id="login-submit">تسجيل الدخول</button>
+        <div class="divider"><span>أو</span></div>
+        <div class="social-buttons">
+          <button type="button" class="btn-social google" aria-label="Google">G</button>
+          <a class="btn-social facebook" aria-label="Facebook" href="#"><img src="../images/facebook.svg" alt="Facebook"></a>
+        </div>
+        <div class="auth-alt">
+          <span>ليس لديك حساب؟</span>
+          <a id="to-signup" href="signup.html">إنشاء حساب</a>
+        </div>
+        <div class="auth-error" id="auth-error" role="alert" aria-live="polite" style="display:none"></div>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="enhanced-footer"></footer>
+
+  <script defer src="../js/header-footer.js"></script>
+  <script defer src="auth.js"></script>
+</body>
+</html>
+

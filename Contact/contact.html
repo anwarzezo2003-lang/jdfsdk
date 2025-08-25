@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تواصل معنا - درووب الجنوب">
+  <title>اتصل بنا - درووب الجنوب</title>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="stylesheet" href="../styles/header-footer.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+ <!-- Fixed Header -->
+ <header class="header"></header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">الاسم الكامل *</label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="أدخل اسمك الكامل">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">البريد الإلكتروني *</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="example@mail.com">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">رسالتك *</label>
+            <textarea id="message" name="message" class="form-input form-textarea" required placeholder="اكتب رسالتك هنا..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submit-btn">إرسال</button>
+        </form>
+        <div class="loading" id="loading"><div class="spinner"></div><p>جاري الإرسال...</p></div>
+        <div class="success-message" id="success-message"><h3>تم إرسال رسالتك بنجاح! 🎉</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="enhanced-footer"></footer>
+
+  <script defer src="../js/header-footer.js"></script>
+  <script defer src="contact.js"></script>
+</body>
+</html>
+
+
