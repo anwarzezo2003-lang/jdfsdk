@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=Home/home.html">
+    <link rel="canonical" href="Home/home.html">
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body { display: flex; align-items: center; justify-content: center; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+        .container { text-align: center; padding: 24px; }
+        a { color: #0b5ed7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+    <script>
+        // JS fallback if meta refresh is blocked
+        (function () {
+            var target = 'Home/home.html';
+            if (location.pathname && /index\.html?$/.test(location.pathname)) {
+                // stay relative
+                window.location.replace(target);
+            } else {
+                window.location.href = target;
+            }
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=Home/home.html">
+    </noscript>
+</head>
+<body>
+    <div class="container">
+        <p>Redirecting to the home page…</p>
+        <p><a href="Home/home.html">Click here if you are not redirected.</a></p>
+    </div>
+</body>
+</html>
+
